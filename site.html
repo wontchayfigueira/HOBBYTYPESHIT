@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ME, MY HOBBIES AND I </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .hobby {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            background: #e8f5e9;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hobby-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .hobby img {
+            width: 100%;
+            max-width: 400px;
+            display: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+       // ME, MY HOBBIES AND I \\
+        <button onclick="toggleDarkMode()" style="margin-left: 20px; padding: 5px 10px; cursor: pointer;">Toggle Dark Mode</button>
+    </header>
+    
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Hi, I'm Wontchay Figueira. I'm passionate about various activities that bring joy and fulfillment to my life.</p>
+        
+        <h2>My Hobbies</h2>
+        <div class="hobby" onclick="toggleHobby(this)">
+            <h3>Reading</h3>
+            <div class="hobby-content">
+                <p>I love exploring different worlds through books. Fiction, fantasy, and self-improvement books are my favorites.</p>
+                <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d" alt="Person reading a book">
+            </div>
+        </div>
+        <div class="hobby" onclick="toggleHobby(this)">
+            <h3>Traveling</h3>
+            <div class="hobby-content">
+                <p>Discovering new cultures and landscapes excites me. Every journey teaches me something new.</p>
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Person traveling">
+            </div>
+        </div>
+        <div class="hobby" onclick="toggleHobby(this)">
+            <h3>Music</h3>
+            <div class="hobby-content">
+                <p>Listening to music and sometimes playing instruments helps me relax and express my emotions.</p>
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Person listening to music">
+            </div>
+        </div>
+        <div class="hobby" onclick="toggleHobby(this)">
+            <h3>Photography</h3>
+            <div class="hobby-content">
+                <p>Capturing beautiful moments and nature through my lens is one of my favorite pastimes.</p>
+                <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813" alt="London Bridge at sunset">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 Wontchay Figueira. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        
+        function toggleHobby(element) {
+            let content = element.querySelector(".hobby-content");
+            let image = content.querySelector("img");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                image.style.display = "none";
+            } else {
+                content.style.display = "block";
+                image.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
